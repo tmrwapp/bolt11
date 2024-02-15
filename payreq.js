@@ -35,7 +35,7 @@ const SIMNETWORK = {
   validWitnessVersions: [0, 1]
 }
 const SIGNETWORK = {
-  bech32: 'lntbs',
+  bech32: 'tbs',
   pubKeyHash: 0x6f,
   scriptHash: 0xc4,
   validWitnessVersions: [0, 1]
