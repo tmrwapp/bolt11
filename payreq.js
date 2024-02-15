@@ -34,6 +34,12 @@ const SIMNETWORK = {
   scriptHash: 0x7b,
   validWitnessVersions: [0, 1]
 }
+const SIGNETWORK = {
+  bech32: 'lntbs',
+  pubKeyHash: 0x6f,
+  scriptHash: 0xc4,
+  validWitnessVersions: [0, 1]
+}
 const DEFAULTEXPIRETIME = 3600
 const DEFAULTCLTVEXPIRY = 9
 const DEFAULTDESCRIPTION = ''
@@ -910,6 +916,8 @@ function decode (paymentRequest, network) {
       case SIMNETWORK.bech32:
         coinNetwork = SIMNETWORK
         break
+      case SIGNETWORK.bech32:
+        coinNetwork = SIGNETWORK
     }
   } else {
     if (
